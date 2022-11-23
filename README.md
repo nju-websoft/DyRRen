@@ -8,7 +8,10 @@ Download the FinQA dataset and put it under directory ``FinQADataset``.
 ## Requirements
 
 - pytorch 1.11.0
-- huggingface transformers 4.17.0
+- transformers 4.17.0
+- pandas
+- rank_bm25
+- sympy
 
 ## Retriever
 
