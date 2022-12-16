@@ -1,18 +1,18 @@
-export RUN_NAME=dyrren_run
+export RUN_NAME=dyrren_run_2e-5_16
 export WANDB_DISABLED=false
 export TOKENIZERS_PARALLELISM=false
 
 export WANDB_PROJECT=DyRRen_project
 
-CUDA_VISIBLE_DEVICES=0 python run_finqa.py \
+CUDA_VISIBLE_DEVICES=1 python run_finqa.py \
   --do_train true \
   --do_eval \
   --do_predict \
   --seed 8 \
   --topn_from_retrieval_texts 3 \
   --dropout_rate 0.1 \
-  --model_name_or_path bert-base-uncased \
-  --learning_rate 1e-5 \
+  --model_name_or_path /home/xli/PTLMs/bert-base-uncased \
+  --learning_rate 2e-5 \
   --per_device_train_batch_size 8 \
   --gradient_accumulation_steps 2 \
   --num_train_epochs 300 \
